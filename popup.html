@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    </head>
+  <body>
+    
+    <h1 style="font-weight:bold; text-align:center;">Forgetbook</h1>
+    <table cell-border="1" cellpadding="3" style="border-collapse:collapse;">
+      <tr>
+        <td>
+          <p>
+            <strong>Thanks for downloading!</strong>
+          </p>
+          <p>
+            <strong>Don't forget to open your Activity Log!</strong>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td nowrap><strong>------------------------------</strong></td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+          <label for="speeds">Choose a speed:</label>
+
+          <select name="speeds" id="speeds">
+            <option value="1/3">1/3 (slowest)</option>
+            <option value="1/2">1/2</option>
+            <option value="1" selected>1 (default)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="4">5 (fastest)</option>
+          </select>
+          </strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+          <label for="quantity">Actions to skip (default 0):</label>
+          <input type="number" id="quantity" name="quantity" min="0" value="0">
+          </strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <label for="photos">What should I do with Photo posts?</label>
+  
+            <select name="photos" id="photos">
+              <option value="1">Hide from Timeline</option>
+              <option value="2">Move to archive</option>
+              <option value="3">Move to trash</option>
+              <option value="4" selected>Keep them, don't delete</option>
+            </select>
+          </strong>
+        </td>
+      </tr>
+      <tr>
+          <td nowrap>
+            <button id="StartDeleteBtn" type="button" style="font-weight:bold;">Start Delete</button>
+            <button id="StopDeleteBtn" type="button" style="font-weight:bold;">Stop Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id='metaData'>
+            <p>
+              <strong id='delete#' style="float:center">Deleted 0 actions</strong>
+            </p>
+            <p>
+              <strong id='activity#' style="float:center">Left off on action #: None yet!</strong>
+            </p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td nowrap><strong>------------------------------</strong></td>
+      </tr>
+      <tr>
+        <td>
+          <p>
+            <strong>We hope Forgetbook saves you a lot of time; if you like it you can <a target='_blank' href='https://paypal.me/forgetbook?locale.x=en_US'>support the project</a>!</strong>
+          </p>
+          <p>
+            <strong>Have feedback for us? </br> Send us an email at: <i>forgetbookapp@gmail.com</i> with your suggestions and questions!</strong>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <script type="text/javascript" src="popup.js"></script>
+  </body>
+</html>

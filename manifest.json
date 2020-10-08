@@ -1,0 +1,43 @@
+{
+  "manifest_version": 2,
+  "name": "Forgetbook",
+  "short_name": "forgetbook",
+  "version": "0.0.1.5",
+  "description": "Automatically delete all of your posts, likes, and comments from Facebook; without removing any friends or leaving any groups.",
+  "offline_enabled": false,
+  "icons": {
+    "16": "images/icon16.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "96": "images/icon96.png",
+    "128": "images/icon128.png"
+  },
+
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [{
+    "matches": ["*://*.facebook.com/*"],
+    "js": ["content.js", "terminator.js"],
+    "run_at": "document_idle",
+    "all_frames": false
+  }],
+
+  "page_action": {
+    "default_title": "Forgetbook",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "32": "images/icon32.png",
+      "48": "images/icon48.png",
+      "96": "images/icon96.png",
+      "128": "images/icon128.png"
+    },
+    "default_popup": "popup.html"
+  },  
+  "permissions": [
+    "activeTab",
+    "*://*.facebook.com/*"
+  ]
+}
